@@ -8,62 +8,35 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Oasis Maternité Color Palette - Warm & Caring */
-    --background: 25 100% 98%;
-    --foreground: 210 15% 25%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 15% 25%;
+    --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 15% 25%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    /* Rose pastel primary - Main brand color */
-    --primary: 350 50% 75%;
-    --primary-foreground: 0 0% 100%;
-    --primary-soft: 350 30% 90%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
 
-    /* Vert tendre secondary */
-    --secondary: 140 30% 80%;
-    --secondary-foreground: 140 60% 25%;
-    --secondary-soft: 140 20% 92%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 25 20% 95%;
-    --muted-foreground: 210 15% 45%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 350 40% 85%;
-    --accent-foreground: 350 60% 25%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
-    --destructive: 0 70% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 25 15% 90%;
-    --input: 25 15% 90%;
-    --ring: 350 50% 75%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
 
-    /* Maternal Care Design Tokens */
-    --maternal-pink: 350 50% 75%;
-    --maternal-pink-light: 350 30% 90%;
-    --maternal-pink-soft: 350 15% 96%;
-    
-    --tender-green: 140 30% 80%;
-    --tender-green-light: 140 20% 92%;
-    --tender-green-soft: 140 10% 97%;
-    
-    --warm-cream: 25 100% 98%;
-    --soft-gray: 210 8% 50%;
-
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(350 50% 75%), hsl(140 30% 80%));
-    --gradient-soft: linear-gradient(180deg, hsl(350 15% 96%), hsl(140 10% 97%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(25 20% 98%));
-
-    /* Shadows */
-    --shadow-maternal: 0 8px 30px -8px hsl(350 50% 75% / 0.15);
-    --shadow-soft: 0 4px 20px -4px hsl(210 15% 25% / 0.08);
-    --shadow-gentle: 0 2px 10px -2px hsl(350 30% 90% / 0.2);
-
-    --radius: 1rem;
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -127,6 +100,6 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-poppins;
+    @apply bg-background text-foreground;
   }
 }
