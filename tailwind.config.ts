@@ -32,6 +32,12 @@ export default {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
+				maternal: {
+					DEFAULT: 'hsl(var(--maternal))',
+					foreground: 'hsl(var(--maternal-foreground))',
+					soft: 'hsl(var(--maternal-soft))',
+					'soft-foreground': 'hsl(var(--maternal-soft-foreground))'
+				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
