@@ -18,6 +18,19 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'poppins': ['Poppins', 'sans-serif'],
+			},
+			backgroundImage: {
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-soft': 'var(--gradient-soft)',
+				'gradient-card': 'var(--gradient-card)',
+			},
+			boxShadow: {
+				'maternal': 'var(--shadow-maternal)',
+				'soft': 'var(--shadow-soft)',
+				'gentle': 'var(--shadow-gentle)',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -26,11 +39,13 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					soft: 'hsl(var(--primary-soft))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					foreground: 'hsl(var(--secondary-foreground))',
+					soft: 'hsl(var(--secondary-soft))'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -51,6 +66,17 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				// Maternal Care Custom Colors
+				maternal: {
+					pink: 'hsl(var(--maternal-pink))',
+					'pink-light': 'hsl(var(--maternal-pink-light))',
+					'pink-soft': 'hsl(var(--maternal-pink-soft))',
+					green: 'hsl(var(--tender-green))',
+					'green-light': 'hsl(var(--tender-green-light))',
+					'green-soft': 'hsl(var(--tender-green-soft))',
+					cream: 'hsl(var(--warm-cream))',
+					gray: 'hsl(var(--soft-gray))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
