@@ -260,259 +260,409 @@ const Home = () => {
       <TestimonialCarousel />
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-maternal-soft/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-4">
-              <div className="bg-maternal/10 p-3 rounded-full mr-4">
-                <HelpCircle className="h-8 w-8 text-maternal" />
+      <section id="faq" className="py-24 bg-gradient-to-br from-maternal-soft/40 via-background to-secondary/20 relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 bg-gradient-to-br from-maternal/5 via-transparent to-secondary/5"></div>
+        
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center justify-center mb-6">
+              <div className="bg-gradient-to-br from-maternal to-maternal-soft p-4 rounded-2xl shadow-lg shadow-maternal/20 mr-4 animate-pulse">
+                <HelpCircle className="h-10 w-10 text-white" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Foire aux Questions
-              </h2>
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-maternal via-secondary to-maternal bg-clip-text text-transparent">
+                  Questions Fréquentes
+                </h2>
+                <div className="h-1 w-24 bg-gradient-to-r from-maternal to-secondary rounded-full mt-2 mx-auto"></div>
+              </div>
             </div>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              Trouvez rapidement les réponses à vos questions les plus fréquentes sur la grossesse, 
-              l'accouchement et nos services d'accompagnement.
+            <p className="text-muted-foreground text-xl max-w-4xl mx-auto leading-relaxed">
+              ✨ Découvrez les réponses bienveillantes à vos questions sur cette belle aventure qu'est la maternité
             </p>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-12">
             {/* Grossesse & suivi médical */}
-            <div>
-              <h3 className="text-xl font-semibold text-maternal mb-4 flex items-center">
-                <Baby className="h-5 w-5 mr-2" />
-                Grossesse & suivi médical
-              </h3>
-              <Accordion type="single" collapsible className="bg-background/60 rounded-2xl border border-border/30 overflow-hidden">
-                <AccordionItem value="grossesse-1" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    À partir de combien de semaines dois-je commencer les consultations prénatales ?
+            <div className="group">
+              <div className="bg-gradient-to-r from-maternal/10 to-secondary/10 p-6 rounded-3xl mb-6 backdrop-blur-sm border border-maternal/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+                <h3 className="text-2xl font-bold text-maternal mb-2 flex items-center">
+                  <div className="bg-gradient-to-br from-maternal to-maternal-soft p-3 rounded-xl mr-4 shadow-lg">
+                    <Baby className="h-7 w-7 text-white" />
+                  </div>
+                  Grossesse & Suivi Médical
+                </h3>
+                <p className="text-muted-foreground ml-16">Tout savoir sur votre suivi prénatal avec bienveillance</p>
+              </div>
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="grossesse-1" className="bg-gradient-to-r from-background/90 to-maternal-soft/10 border border-maternal/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-maternal/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-maternal/20 p-2 rounded-full mr-4">🤱</span>
+                      À partir de combien de semaines dois-je commencer les consultations prénatales ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Il est recommandé de commencer le suivi prénatal dès les premières semaines de grossesse (idéalement avant la 12ᵉ semaine).
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-maternal-soft/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-maternal">
+                      Il est recommandé de commencer le suivi prénatal dès les premières semaines de grossesse (idéalement avant la 12ᵉ semaine). Plus tôt vous commencez, mieux nous pouvons vous accompagner dans cette belle aventure ! 💕
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="grossesse-2" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    À quelle fréquence dois-je faire une échographie pendant ma grossesse ?
+                <AccordionItem value="grossesse-2" className="bg-gradient-to-r from-background/90 to-maternal-soft/10 border border-maternal/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-maternal/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-maternal/20 p-2 rounded-full mr-4">📸</span>
+                      À quelle fréquence dois-je faire une échographie pendant ma grossesse ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    En général, trois échographies sont nécessaires : une au premier trimestre, une au deuxième et une au troisième. Selon votre état de santé, la sage-femme ou le médecin peut recommander un suivi plus rapproché.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-maternal-soft/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-maternal">
+                      En général, trois échographies sont nécessaires : une au premier trimestre, une au deuxième et une au troisième. Selon votre état de santé, la sage-femme ou le médecin peut recommander un suivi plus rapproché. Ces moments précieux vous permettront de voir grandir votre petit trésor ! ✨
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="grossesse-3" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Quels sont les signes qui doivent m'inquiéter pendant la grossesse ?
+                <AccordionItem value="grossesse-3" className="bg-gradient-to-r from-background/90 to-maternal-soft/10 border border-maternal/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-maternal/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-maternal/20 p-2 rounded-full mr-4">⚠️</span>
+                      Quels sont les signes qui doivent m'inquiéter pendant la grossesse ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Des saignements, des douleurs abdominales intenses, une perte de liquide, une diminution des mouvements du bébé ou des maux de tête sévères doivent vous amener à consulter immédiatement.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-maternal-soft/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-maternal">
+                      Des saignements, des douleurs abdominales intenses, une perte de liquide, une diminution des mouvements du bébé ou des maux de tête sévères doivent vous amener à consulter immédiatement. N'hésitez jamais à nous appeler, nous sommes là pour vous rassurer ! 🤗
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="grossesse-4">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Proposez-vous un suivi nutritionnel pour les femmes enceintes ?
+                <AccordionItem value="grossesse-4" className="bg-gradient-to-r from-background/90 to-maternal-soft/10 border border-maternal/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-maternal/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-maternal/20 p-2 rounded-full mr-4">🥗</span>
+                      Proposez-vous un suivi nutritionnel pour les femmes enceintes ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Oui, nous donnons des conseils personnalisés pour une alimentation équilibrée et adaptée à chaque étape de la grossesse.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-maternal-soft/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-maternal">
+                      Oui, nous donnons des conseils personnalisés pour une alimentation équilibrée et adaptée à chaque étape de la grossesse. Bien nourrir maman, c'est bien nourrir bébé ! 🌱
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
             </div>
 
             {/* Accouchement */}
-            <div>
-              <h3 className="text-xl font-semibold text-maternal mb-4 flex items-center">
-                <Heart className="h-5 w-5 mr-2" />
-                Accouchement
-              </h3>
-              <Accordion type="single" collapsible className="bg-background/60 rounded-2xl border border-border/30 overflow-hidden">
-                <AccordionItem value="accouchement-1" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Est-ce que OASIS de la Maternité propose l'accouchement sur place ou uniquement le suivi ?
+            <div className="group">
+              <div className="bg-gradient-to-r from-secondary/10 to-maternal/10 p-6 rounded-3xl mb-6 backdrop-blur-sm border border-secondary/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+                <h3 className="text-2xl font-bold text-secondary mb-2 flex items-center">
+                  <div className="bg-gradient-to-br from-secondary to-secondary/80 p-3 rounded-xl mr-4 shadow-lg">
+                    <Heart className="h-7 w-7 text-white" />
+                  </div>
+                  Accouchement & Naissance
+                </h3>
+                <p className="text-muted-foreground ml-16">L'accompagnement pour ce moment magique de la vie</p>
+              </div>
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="accouchement-1" className="bg-gradient-to-r from-background/90 to-secondary/10 border border-secondary/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-secondary/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-secondary/20 p-2 rounded-full mr-4">🏥</span>
+                      Est-ce que OASIS de la Maternité propose l'accouchement sur place ou uniquement le suivi ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Nous assurons principalement le suivi et la préparation. Pour l'accouchement, nous orientons nos patientes vers des établissements partenaires sécurisés.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-secondary/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-secondary">
+                      Nous assurons principalement le suivi et la préparation. Pour l'accouchement, nous orientons nos patientes vers des établissements partenaires sécurisés. Votre sécurité et celle de votre bébé sont notre priorité absolue ! 🛡️
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="accouchement-2" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Puis-je choisir entre accouchement naturel et césarienne ?
+                <AccordionItem value="accouchement-2" className="bg-gradient-to-r from-background/90 to-secondary/10 border border-secondary/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-secondary/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-secondary/20 p-2 rounded-full mr-4">🌸</span>
+                      Puis-je choisir entre accouchement naturel et césarienne ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Le choix dépend de votre état de santé et de celui de votre bébé. Nos sages-femmes vous accompagnent et vous conseillent pour l'option la plus sûre.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-secondary/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-secondary">
+                      Le choix dépend de votre état de santé et de celui de votre bébé. Nos sages-femmes vous accompagnent et vous conseillent pour l'option la plus sûre. Chaque accouchement est unique et merveilleux ! ✨
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="accouchement-3" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Est-ce que le papa peut assister à l'accouchement ?
+                <AccordionItem value="accouchement-3" className="bg-gradient-to-r from-background/90 to-secondary/10 border border-secondary/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-secondary/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-secondary/20 p-2 rounded-full mr-4">👨‍👩‍👶</span>
+                      Est-ce que le papa peut assister à l'accouchement ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Oui, nous encourageons la présence du conjoint, car cela favorise le soutien émotionnel et le bien-être de la maman.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-secondary/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-secondary">
+                      Oui, nous encourageons la présence du conjoint, car cela favorise le soutien émotionnel et le bien-être de la maman. Vivre ensemble ce moment magique renforce les liens familiaux ! 💕
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="accouchement-4">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Quels sont les services disponibles pour le post-partum (après l'accouchement) ?
+                <AccordionItem value="accouchement-4" className="bg-gradient-to-r from-background/90 to-secondary/10 border border-secondary/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-secondary/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-secondary/20 p-2 rounded-full mr-4">🤱</span>
+                      Quels sont les services disponibles pour le post-partum (après l'accouchement) ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Nous proposons un suivi post-natal, des conseils pour l'allaitement, la récupération physique et le soutien psychologique.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-secondary/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-secondary">
+                      Nous proposons un suivi post-natal, des conseils pour l'allaitement, la récupération physique et le soutien psychologique. Nous restons à vos côtés même après la naissance ! 🌈
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
             </div>
 
             {/* Services & accompagnement */}
-            <div>
-              <h3 className="text-xl font-semibold text-maternal mb-4 flex items-center">
-                <Users className="h-5 w-5 mr-2" />
-                Services & accompagnement
-              </h3>
-              <Accordion type="single" collapsible className="bg-background/60 rounded-2xl border border-border/30 overflow-hidden">
-                <AccordionItem value="services-1" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Quelles sont les spécialités disponibles à OASIS de la Maternité ?
+            <div className="group">
+              <div className="bg-gradient-to-r from-maternal/10 to-secondary/10 p-6 rounded-3xl mb-6 backdrop-blur-sm border border-maternal/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+                <h3 className="text-2xl font-bold text-maternal mb-2 flex items-center">
+                  <div className="bg-gradient-to-br from-maternal to-maternal-soft p-3 rounded-xl mr-4 shadow-lg">
+                    <Users className="h-7 w-7 text-white" />
+                  </div>
+                  Services & Accompagnement
+                </h3>
+                <p className="text-muted-foreground ml-16">Une équipe dédiée pour votre bien-être complet</p>
+              </div>
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="services-1" className="bg-gradient-to-r from-background/90 to-maternal/10 border border-maternal/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-maternal/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-maternal/20 p-2 rounded-full mr-4">👩‍⚕️</span>
+                      Quelles sont les spécialités disponibles à OASIS de la Maternité ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Nous travaillons avec des sages-femmes qualifiées, des échographistes expérimentés et des conseillers en santé maternelle.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-maternal-soft/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-maternal">
+                      Nous travaillons avec des sages-femmes qualifiées, des échographistes expérimentés et des conseillers en santé maternelle. Une équipe passionnée et dévouée ! 👥
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="services-2" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Faites-vous des ateliers ou des séances de préparation à l'accouchement ?
+                <AccordionItem value="services-2" className="bg-gradient-to-r from-background/90 to-maternal/10 border border-maternal/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-maternal/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-maternal/20 p-2 rounded-full mr-4">🧘‍♀️</span>
+                      Faites-vous des ateliers ou des séances de préparation à l'accouchement ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Oui, nous organisons régulièrement des ateliers sur la respiration, la relaxation, l'allaitement et les soins du nouveau-né.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-maternal-soft/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-maternal">
+                      Oui, nous organisons régulièrement des ateliers sur la respiration, la relaxation, l'allaitement et les soins du nouveau-né. Des moments d'apprentissage et de partage entre futures mamans ! 🌸
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="services-3" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Est-il possible d'avoir un accompagnement psychologique pendant et après la grossesse ?
+                <AccordionItem value="services-3" className="bg-gradient-to-r from-background/90 to-maternal/10 border border-maternal/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-maternal/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-maternal/20 p-2 rounded-full mr-4">💝</span>
+                      Est-il possible d'avoir un accompagnement psychologique pendant et après la grossesse ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Absolument, nous proposons un accompagnement adapté pour aider les futures mamans à vivre cette période avec sérénité.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-maternal-soft/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-maternal">
+                      Absolument, nous proposons un accompagnement adapté pour aider les futures mamans à vivre cette période avec sérénité. Votre bien-être émotionnel nous tient à cœur ! 💚
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="services-4">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Proposez-vous des conseils pour l'allaitement et les soins du nouveau-né ?
+                <AccordionItem value="services-4" className="bg-gradient-to-r from-background/90 to-maternal/10 border border-maternal/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-maternal/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-maternal/20 p-2 rounded-full mr-4">🍼</span>
+                      Proposez-vous des conseils pour l'allaitement et les soins du nouveau-né ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Oui, nos équipes conseillent les mamans sur les bonnes pratiques pour l'allaitement, la nutrition et les premiers soins du bébé.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-maternal-soft/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-maternal">
+                      Oui, nos équipes conseillent les mamans sur les bonnes pratiques pour l'allaitement, la nutrition et les premiers soins du bébé. Nous vous accompagnons dans ces premiers pas précieux ! 👶
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
             </div>
 
             {/* Organisation & rendez-vous */}
-            <div>
-              <h3 className="text-xl font-semibold text-maternal mb-4 flex items-center">
-                <Calendar className="h-5 w-5 mr-2" />
-                Organisation & rendez-vous
-              </h3>
-              <Accordion type="single" collapsible className="bg-background/60 rounded-2xl border border-border/30 overflow-hidden">
-                <AccordionItem value="organisation-1" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Comment prendre rendez-vous ?
+            <div className="group">
+              <div className="bg-gradient-to-r from-secondary/10 to-maternal/10 p-6 rounded-3xl mb-6 backdrop-blur-sm border border-secondary/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+                <h3 className="text-2xl font-bold text-secondary mb-2 flex items-center">
+                  <div className="bg-gradient-to-br from-secondary to-secondary/80 p-3 rounded-xl mr-4 shadow-lg">
+                    <Calendar className="h-7 w-7 text-white" />
+                  </div>
+                  Organisation & Rendez-vous
+                </h3>
+                <p className="text-muted-foreground ml-16">Prendre rendez-vous n'a jamais été aussi simple</p>
+              </div>
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="organisation-1" className="bg-gradient-to-r from-background/90 to-secondary/10 border border-secondary/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-secondary/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-secondary/20 p-2 rounded-full mr-4">📞</span>
+                      Comment prendre rendez-vous ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Vous pouvez nous contacter par téléphone, WhatsApp ou email pour planifier un rendez-vous.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-secondary/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-secondary">
+                      Vous pouvez nous contacter par téléphone, WhatsApp ou email pour planifier un rendez-vous. Nous sommes là pour vous faciliter la vie ! 📱
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="organisation-2" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Quels sont vos horaires d'ouverture ?
+                <AccordionItem value="organisation-2" className="bg-gradient-to-r from-background/90 to-secondary/10 border border-secondary/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-secondary/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-secondary/20 p-2 rounded-full mr-4">⏰</span>
+                      Quels sont vos horaires d'ouverture ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Nous sommes ouverts du lundi au samedi de 8h à 18h.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-secondary/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-secondary">
+                      Nous sommes ouverts du lundi au samedi de 8h à 18h. Des horaires pratiques pour s'adapter à votre rythme de vie ! 🕐
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="organisation-3" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Est-il possible d'avoir une téléconsultation ?
+                <AccordionItem value="organisation-3" className="bg-gradient-to-r from-background/90 to-secondary/10 border border-secondary/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-secondary/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-secondary/20 p-2 rounded-full mr-4">💻</span>
+                      Est-il possible d'avoir une téléconsultation ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Oui, certaines consultations de suivi ou de conseils peuvent se faire en ligne.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-secondary/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-secondary">
+                      Oui, certaines consultations de suivi ou de conseils peuvent se faire en ligne. La technologie au service de votre confort ! 🌐
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="organisation-4" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Où se situe exactement OASIS de la Maternité ?
+                <AccordionItem value="organisation-4" className="bg-gradient-to-r from-background/90 to-secondary/10 border border-secondary/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-secondary/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-secondary/20 p-2 rounded-full mr-4">📍</span>
+                      Où se situe exactement OASIS de la Maternité ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Nous sommes situés à Angré Gestoci, Abidjan, Côte d'Ivoire. Vous pouvez retrouver notre localisation exacte sur Google Maps.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-secondary/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-secondary">
+                      Nous sommes situés à Angré Gestoci, Abidjan, Côte d'Ivoire. Vous pouvez retrouver notre localisation exacte sur Google Maps. Un cadre paisible pour votre bien-être ! 🗺️
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="organisation-5">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Quels sont vos tarifs pour les consultations et les échographies ?
+                <AccordionItem value="organisation-5" className="bg-gradient-to-r from-background/90 to-secondary/10 border border-secondary/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-secondary/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-secondary/20 p-2 rounded-full mr-4">💰</span>
+                      Quels sont vos tarifs pour les consultations et les échographies ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Nos tarifs varient selon le type de service. Pour plus d'informations précises, contactez-nous directement.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-secondary/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-secondary">
+                      Nos tarifs varient selon le type de service. Pour plus d'informations précises, contactez-nous directement. Des prix justes pour un accompagnement de qualité ! 💎
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
             </div>
 
             {/* Autres préoccupations fréquentes */}
-            <div>
-              <h3 className="text-xl font-semibold text-maternal mb-4 flex items-center">
-                <Stethoscope className="h-5 w-5 mr-2" />
-                Autres préoccupations fréquentes
-              </h3>
-              <Accordion type="single" collapsible className="bg-background/60 rounded-2xl border border-border/30 overflow-hidden">
-                <AccordionItem value="autres-1" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Je suis enceinte et j'ai du mal à manger, est-ce normal ?
+            <div className="group">
+              <div className="bg-gradient-to-r from-maternal/10 to-secondary/10 p-6 rounded-3xl mb-6 backdrop-blur-sm border border-maternal/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+                <h3 className="text-2xl font-bold text-maternal mb-2 flex items-center">
+                  <div className="bg-gradient-to-br from-maternal to-maternal-soft p-3 rounded-xl mr-4 shadow-lg">
+                    <Stethoscope className="h-7 w-7 text-white" />
+                  </div>
+                  Conseils Santé & Bien-être
+                </h3>
+                <p className="text-muted-foreground ml-16">Toutes nos réponses pour une grossesse épanouie</p>
+              </div>
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="autres-1" className="bg-gradient-to-r from-background/90 to-maternal/10 border border-maternal/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-maternal/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-maternal/20 p-2 rounded-full mr-4">🍽️</span>
+                      Je suis enceinte et j'ai du mal à manger, est-ce normal ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Il est fréquent d'avoir des changements d'appétit pendant la grossesse. Nous vous aidons à adapter votre alimentation pour couvrir vos besoins et ceux du bébé.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-maternal-soft/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-maternal">
+                      Il est fréquent d'avoir des changements d'appétit pendant la grossesse. Nous vous aidons à adapter votre alimentation pour couvrir vos besoins et ceux du bébé. C'est tout à fait normal ! 🌿
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="autres-2" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Quels aliments dois-je privilégier pendant ma grossesse ?
+                <AccordionItem value="autres-2" className="bg-gradient-to-r from-background/90 to-maternal/10 border border-maternal/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-maternal/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-maternal/20 p-2 rounded-full mr-4">🥕</span>
+                      Quels aliments dois-je privilégier pendant ma grossesse ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Favorisez les fruits, légumes, protéines maigres, céréales complètes et buvez beaucoup d'eau. Limitez les produits trop gras ou sucrés.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-maternal-soft/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-maternal">
+                      Favorisez les fruits, légumes, protéines maigres, céréales complètes et buvez beaucoup d'eau. Limitez les produits trop gras ou sucrés. Une alimentation colorée pour une maman rayonnante ! 🌈
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="autres-3" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Puis-je voyager en étant enceinte ?
+                <AccordionItem value="autres-3" className="bg-gradient-to-r from-background/90 to-maternal/10 border border-maternal/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-maternal/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-maternal/20 p-2 rounded-full mr-4">✈️</span>
+                      Puis-je voyager en étant enceinte ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Oui, sauf contre-indication médicale. Consultez toujours votre sage-femme avant de voyager, surtout après le 7ᵉ mois.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-maternal-soft/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-maternal">
+                      Oui, sauf contre-indication médicale. Consultez toujours votre sage-femme avant de voyager, surtout après le 7ᵉ mois. Profitez de ces derniers moments à deux ! 🌍
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="autres-4" className="border-border/30">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Quels exercices ou activités physiques sont recommandés pendant la grossesse ?
+                <AccordionItem value="autres-4" className="bg-gradient-to-r from-background/90 to-maternal/10 border border-maternal/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-maternal/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-maternal/20 p-2 rounded-full mr-4">🏃‍♀️</span>
+                      Quels exercices ou activités physiques sont recommandés pendant la grossesse ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    La marche, la natation douce et le yoga prénatal sont conseillés, sauf avis contraire de votre médecin.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-maternal-soft/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-maternal">
+                      La marche, la natation douce et le yoga prénatal sont conseillés, sauf avis contraire de votre médecin. Bouger en douceur pour votre bien-être ! 🧘‍♀️
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="autres-5">
-                  <AccordionTrigger className="px-6 hover:bg-maternal/5">
-                    Que faire en cas de contractions avant terme ?
+                <AccordionItem value="autres-5" className="bg-gradient-to-r from-background/90 to-maternal/10 border border-maternal/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <AccordionTrigger className="px-8 py-6 hover:bg-maternal/5 text-left">
+                    <span className="font-semibold text-foreground flex items-center">
+                      <span className="bg-maternal/20 p-2 rounded-full mr-4">🚨</span>
+                      Que faire en cas de contractions avant terme ?
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                    Consultez immédiatement un professionnel de santé pour vérifier si ce sont de "fausses contractions" ou un vrai travail prématuré.
+                  <AccordionContent className="px-8 pb-8 text-muted-foreground bg-gradient-to-br from-maternal-soft/5 to-transparent">
+                    <div className="bg-white/50 p-6 rounded-xl border-l-4 border-maternal">
+                      Consultez immédiatement un professionnel de santé pour vérifier si ce sont de "fausses contractions" ou un vrai travail prématuré. En cas de doute, n'hésitez jamais ! 🆘
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
             </div>
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-6">
-              Vous avez d'autres questions ? Notre équipe est là pour vous accompagner.
-            </p>
-            <Button variant="maternal" size="lg">
-              <Phone className="h-4 w-4 mr-2" />
-              Nous contacter
-            </Button>
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-r from-maternal-soft/20 to-secondary/20 p-8 rounded-3xl border border-maternal/20 shadow-2xl backdrop-blur-sm">
+              <h3 className="text-2xl font-bold text-foreground mb-4">💝 Une question spécifique ?</h3>
+              <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+                Notre équipe bienveillante est là pour vous accompagner avec tendresse et professionnalisme. 
+                <br />N'hésitez pas à nous contacter, chaque question mérite une réponse personnalisée ! ✨
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button variant="maternal" size="lg" className="shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Phone className="h-5 w-5 mr-2" />
+                  Appeler maintenant
+                </Button>
+                <Button variant="maternal-soft" size="lg" className="shadow-lg hover:shadow-xl transition-all duration-300">
+                  <MessageCircle className="h-5 w-5 mr-2" />
+                  WhatsApp
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
