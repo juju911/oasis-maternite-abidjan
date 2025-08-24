@@ -8,8 +8,8 @@ const Navigation = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "22505669977785";
-    const message = "👉 Bonjour, je viens du site internet OASIS de la Maternité...";
+    const phoneNumber = "2250566997785";
+    const message = "Bonjour, je viens du site internet OASIS de la Maternité...";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };

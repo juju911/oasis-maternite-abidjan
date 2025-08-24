@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 
 const WhatsAppFloat = () => {
-  const phoneNumber = "22505669977785";
-  const message = "👉 Bonjour, je viens du site internet OASIS de la Maternité...";
+  const phoneNumber = "2250566997785";
+  const message = "Bonjour, je viens du site internet OASIS de la Maternité...";
 
   const handleWhatsAppClick = () => {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
