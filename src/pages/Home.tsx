@@ -4,6 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import Navigation from "@/components/Navigation";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import ChatBot from "@/components/ChatBot";
 import heroImage from "@/assets/hero-maternite.jpg";
 import {
   Heart,
@@ -845,6 +846,7 @@ const Home = () => {
       </footer>
 
       <WhatsAppFloat />
+      <ChatBot />
     </div>
   );
 };
