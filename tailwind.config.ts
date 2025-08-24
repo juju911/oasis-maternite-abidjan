@@ -38,6 +38,10 @@ export default {
 					soft: 'hsl(var(--maternal-soft))',
 					'soft-foreground': 'hsl(var(--maternal-soft-foreground))'
 				},
+				whatsapp: {
+					DEFAULT: 'hsl(var(--whatsapp))',
+					foreground: 'hsl(var(--whatsapp-foreground))'
+				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'

@@ -12,10 +12,11 @@ const WhatsAppFloat = () => {
 
   return (
     <Button
-      variant="maternal"
+      variant="whatsapp"
       size="icon"
-      className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 animate-pulse"
+      className="fixed bottom-6 right-24 z-50 h-14 w-14 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 animate-pulse"
       onClick={handleWhatsAppClick}
+      title="Contactez-nous sur WhatsApp"
     >
       <MessageCircle className="h-7 w-7" />
     </Button>

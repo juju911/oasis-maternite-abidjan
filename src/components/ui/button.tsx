@@ -21,6 +21,7 @@ const buttonVariants = cva(
         maternal: "bg-maternal text-maternal-foreground hover:bg-maternal/90 shadow-lg",
         "maternal-outline": "border-2 border-maternal text-maternal bg-background hover:bg-maternal hover:text-maternal-foreground",
         "maternal-soft": "bg-maternal-soft text-maternal-soft-foreground hover:bg-maternal-soft/80",
+        whatsapp: "bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90 shadow-lg hover:shadow-whatsapp/25",
       },
       size: {
         default: "h-10 px-4 py-2",
