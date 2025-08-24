@@ -14,80 +14,124 @@ interface Message {
 }
 
 const faqData = [
+  // Grossesse & suivi médical
   {
-    keywords: ['consultation', 'semaine', 'commencer', 'prénatal'],
+    keywords: ['consultation', 'semaine', 'commencer', 'prénatal', 'suivi'],
     question: 'À partir de combien de semaines dois-je commencer les consultations prénatales ?',
-    answer: 'Il est recommandé de commencer le suivi prénatal dès les premières semaines de grossesse (idéalement avant la 12ᵉ semaine). 🤱'
+    answer: 'Il est recommandé de commencer le suivi prénatal dès les premières semaines de grossesse, idéalement avant la 12ᵉ semaine. 🤱'
   },
   {
-    keywords: ['échographie', 'fréquence', 'combien'],
-    question: 'À quelle fréquence dois-je faire une échographie ?',
-    answer: 'En général, trois échographies sont nécessaires : une au premier trimestre, une au deuxième et une au troisième. Selon votre état de santé, nous pouvons recommander un suivi plus rapproché. 👶'
+    keywords: ['échographie', 'fréquence', 'combien', 'trimestre'],
+    question: 'À quelle fréquence dois-je faire une échographie pendant ma grossesse ?',
+    answer: 'En général, trois échographies sont nécessaires : une au premier trimestre, une au deuxième et une au troisième. Selon votre état de santé, la sage-femme ou le médecin peut recommander un suivi plus rapproché. 👶'
   },
   {
-    keywords: ['signes', 'inquiéter', 'danger', 'urgence', 'saignement'],
-    question: 'Quels sont les signes qui doivent m\'inquiéter ?',
-    answer: 'Des saignements, des douleurs abdominales intenses, une perte de liquide, une diminution des mouvements du bébé ou des maux de tête sévères doivent vous amener à consulter immédiatement. ⚠️'
+    keywords: ['signes', 'inquiéter', 'danger', 'urgence', 'saignement', 'douleur', 'liquide'],
+    question: 'Quels sont les signes qui doivent m\'inquiéter pendant la grossesse ?',
+    answer: 'Des saignements, des douleurs abdominales intenses, une perte de liquide, une diminution des mouvements du bébé ou des maux de tête sévères doivent vous amener à consulter immédiatement. 🚨'
   },
   {
-    keywords: ['nutrition', 'alimentaire', 'manger', 'régime'],
-    question: 'Proposez-vous un suivi nutritionnel ?',
+    keywords: ['nutrition', 'alimentaire', 'manger', 'régime', 'nourriture'],
+    question: 'Proposez-vous un suivi nutritionnel pour les femmes enceintes ?',
     answer: 'Oui, nous donnons des conseils personnalisés pour une alimentation équilibrée et adaptée à chaque étape de la grossesse. 🥗'
   },
   {
-    keywords: ['accouchement', 'sur place', 'lieu'],
-    question: 'Où puis-je accoucher ?',
+    keywords: ['appétit', 'mal', 'manger', 'nausée'],
+    question: 'Je suis enceinte et j\'ai du mal à manger, est-ce normal ?',
+    answer: 'Il est fréquent d\'avoir des changements d\'appétit pendant la grossesse. Nous vous aidons à adapter votre alimentation pour couvrir vos besoins et ceux du bébé. 💚'
+  },
+  {
+    keywords: ['aliments', 'privilégier', 'alimentation', 'conseils'],
+    question: 'Quels aliments dois-je privilégier pendant ma grossesse ?',
+    answer: 'Favorisez les fruits, légumes, protéines maigres, céréales complètes et buvez beaucoup d\'eau. Limitez les produits trop gras ou sucrés. 🍎'
+  },
+
+  // Accouchement
+  {
+    keywords: ['accouchement', 'sur place', 'lieu', 'où'],
+    question: 'Est-ce que OASIS de la Maternité propose l\'accouchement sur place ou uniquement le suivi ?',
     answer: 'Nous assurons principalement le suivi et la préparation. Pour l\'accouchement, nous orientons nos patientes vers des établissements partenaires sécurisés. 🏥'
   },
   {
-    keywords: ['papa', 'conjoint', 'présence', 'assister'],
-    question: 'Le papa peut-il assister à l\'accouchement ?',
+    keywords: ['choisir', 'naturel', 'césarienne', 'accouchement'],
+    question: 'Puis-je choisir entre accouchement naturel et césarienne ?',
+    answer: 'Le choix dépend de votre état de santé et de celui de votre bébé. Nos sages-femmes vous accompagnent et vous conseillent pour l\'option la plus sûre. 👩‍⚕️'
+  },
+  {
+    keywords: ['papa', 'conjoint', 'présence', 'assister', 'père'],
+    question: 'Est-ce que le papa peut assister à l\'accouchement ?',
     answer: 'Oui, nous encourageons la présence du conjoint, car cela favorise le soutien émotionnel et le bien-être de la maman. 👨‍👩‍👶'
   },
   {
-    keywords: ['post-partum', 'après', 'allaitement'],
-    question: 'Quels services après l\'accouchement ?',
+    keywords: ['post-partum', 'après', 'services', 'accouchement'],
+    question: 'Quels sont les services disponibles pour le post-partum (après l\'accouchement) ?',
     answer: 'Nous proposons un suivi post-natal, des conseils pour l\'allaitement, la récupération physique et le soutien psychologique. 🤱'
   },
+
+  // Services & accompagnement
   {
-    keywords: ['ateliers', 'préparation', 'cours'],
-    question: 'Faites-vous des ateliers ?',
+    keywords: ['spécialités', 'équipe', 'professionnels'],
+    question: 'Quelles sont les spécialités disponibles à OASIS de la Maternité ?',
+    answer: 'Nous travaillons avec des sages-femmes qualifiées, des échographistes expérimentés et des conseillers en santé maternelle. 👩‍⚕️'
+  },
+  {
+    keywords: ['ateliers', 'préparation', 'cours', 'séances'],
+    question: 'Faites-vous des ateliers ou des séances de préparation à l\'accouchement ?',
     answer: 'Oui, nous organisons régulièrement des ateliers sur la respiration, la relaxation, l\'allaitement et les soins du nouveau-né. 🧘‍♀️'
   },
   {
-    keywords: ['rendez-vous', 'contact', 'prendre'],
-    question: 'Comment prendre rendez-vous ?',
-    answer: 'Vous pouvez nous contacter par téléphone, WhatsApp ou email pour planifier un rendez-vous. 📞'
+    keywords: ['psychologique', 'accompagnement', 'soutien', 'stress'],
+    question: 'Est-il possible d\'avoir un accompagnement psychologique pendant et après la grossesse ?',
+    answer: 'Absolument, nous proposons un accompagnement adapté pour aider les futures mamans à vivre cette période avec sérénité. 💜'
   },
   {
-    keywords: ['horaires', 'ouverture', 'heures'],
-    question: 'Quels sont vos horaires ?',
+    keywords: ['allaitement', 'conseils', 'soins', 'nouveau-né', 'bébé'],
+    question: 'Proposez-vous des conseils pour l\'allaitement et les soins du nouveau-né ?',
+    answer: 'Oui, nos équipes conseillent les mamans sur les bonnes pratiques pour l\'allaitement, la nutrition et les premiers soins du bébé. 🍼'
+  },
+
+  // Organisation & rendez-vous
+  {
+    keywords: ['rendez-vous', 'contact', 'prendre', 'réserver'],
+    question: 'Comment prendre rendez-vous ?',
+    answer: 'Vous pouvez nous contacter par téléphone (01 53 38 61 20), WhatsApp ou email (oasisdelamaternite@gmail.com) pour planifier un rendez-vous. 📞'
+  },
+  {
+    keywords: ['horaires', 'ouverture', 'heures', 'ouverts'],
+    question: 'Quels sont vos horaires d\'ouverture ?',
     answer: 'Nous sommes ouverts du lundi au samedi de 8h à 18h. 🕐'
   },
   {
-    keywords: ['téléconsultation', 'en ligne', 'distance'],
-    question: 'Faites-vous des téléconsultations ?',
+    keywords: ['téléconsultation', 'en ligne', 'distance', 'vidéo'],
+    question: 'Est-il possible d\'avoir une téléconsultation ?',
     answer: 'Oui, certaines consultations de suivi ou de conseils peuvent se faire en ligne. 💻'
   },
   {
-    keywords: ['localisation', 'adresse', 'où', 'situé'],
-    question: 'Où êtes-vous situés ?',
-    answer: 'Nous sommes situés à Angré Gestoci, Abidjan, Côte d\'Ivoire. 📍'
+    keywords: ['localisation', 'adresse', 'où', 'situé', 'lieu'],
+    question: 'Où se situe exactement OASIS de la Maternité ?',
+    answer: 'Nous sommes situés à Angré Gestoci, Abidjan, Côte d\'Ivoire. Vous pouvez retrouver notre localisation exacte sur Google Maps. 📍'
   },
   {
-    keywords: ['tarifs', 'prix', 'coût'],
-    question: 'Quels sont vos tarifs ?',
+    keywords: ['tarifs', 'prix', 'coût', 'combien'],
+    question: 'Quels sont vos tarifs pour les consultations et les échographies ?',
     answer: 'Nos tarifs varient selon le type de service. Pour plus d\'informations précises, contactez-nous directement. 💰'
   },
+
+  // Autres préoccupations fréquentes
   {
-    keywords: ['voyager', 'voyage', 'déplacement'],
-    question: 'Puis-je voyager enceinte ?',
+    keywords: ['voyager', 'voyage', 'déplacement', 'avion'],
+    question: 'Puis-je voyager en étant enceinte ?',
     answer: 'Oui, sauf contre-indication médicale. Consultez toujours votre sage-femme avant de voyager, surtout après le 7ᵉ mois. ✈️'
   },
   {
     keywords: ['exercice', 'sport', 'activité', 'physique'],
-    question: 'Quels exercices pendant la grossesse ?',
+    question: 'Quels exercices ou activités physiques sont recommandés pendant la grossesse ?',
     answer: 'La marche, la natation douce et le yoga prénatal sont conseillés, sauf avis contraire de votre médecin. 🏊‍♀️'
+  },
+  {
+    keywords: ['contractions', 'avant', 'terme', 'prématuré'],
+    question: 'Que faire en cas de contractions avant terme ?',
+    answer: 'Consultez immédiatement un professionnel de santé pour vérifier si ce sont de "fausses contractions" ou un vrai travail prématuré. 🚨'
   }
 ];
 
@@ -116,7 +160,7 @@ const ChatBot: React.FC = () => {
   const findBestMatch = (userMessage: string): string => {
     const lowerMessage = userMessage.toLowerCase();
     
-    // Chercher dans les mots-clés
+    // 1. Chercher d'abord dans la FAQ
     let bestMatch = null;
     let maxMatches = 0;
     
@@ -135,16 +179,52 @@ const ChatBot: React.FC = () => {
       return bestMatch.answer;
     }
     
-    // Réponses génériques
-    if (lowerMessage.includes('bonjour') || lowerMessage.includes('salut')) {
-      return 'Bonjour ! 😊 Je suis là pour répondre à vos questions sur la maternité. N\'hésitez pas à me poser vos questions !';
+    // 2. Chercher dans la knowledge base OASIS
+    const knowledgeBaseTopics = {
+      // Services généraux
+      'bien-être': 'OASIS de la Maternité est un centre dédié au bien-être des femmes enceintes, des futures mamans et des jeunes parents. Nous vous accompagnons avec bienveillance tout au long de votre parcours. 💕',
+      'équipe': 'Notre équipe est composée de sages-femmes qualifiées, d\'échographistes expérimentés et de conseillers en santé maternelle pour vous offrir le meilleur accompagnement. 👩‍⚕️',
+      'sécurité': 'Nous mettons en avant la sécurité, la bienveillance et la proximité dans tous nos services pour votre tranquillité d\'esprit. 🛡️',
+      
+      // Services spécifiques
+      'échographies': 'Nous réalisons des échographies obstétricales au premier, deuxième et troisième trimestre avec des équipements modernes. 👶',
+      'préparation': 'Nos séances de préparation à l\'accouchement incluent la respiration, la relaxation et le yoga prénatal. 🧘‍♀️',
+      'nutrition': 'Nous proposons un accompagnement nutritionnel personnalisé avec des conseils alimentaires adaptés à chaque étape de la grossesse. 🥗',
+      'post-natal': 'Notre suivi post-natal comprend l\'accompagnement pour la récupération physique, psychologique et les conseils d\'allaitement. 🤱',
+      
+      // Informations pratiques
+      'angré': 'Nous sommes situés à Angré Gestoci, Abidjan, Côte d\'Ivoire, dans un cadre chaleureux et accueillant. 📍',
+      'établissements': 'Nous travaillons avec des établissements partenaires sécurisés pour vous orienter vers les meilleurs soins d\'accouchement. 🏥'
+    };
+    
+    // Chercher les mots-clés dans la knowledge base
+    for (const [topic, response] of Object.entries(knowledgeBaseTopics)) {
+      if (lowerMessage.includes(topic)) {
+        return response;
+      }
     }
     
-    if (lowerMessage.includes('merci')) {
-      return 'De rien ! 😊 N\'hésitez pas si vous avez d\'autres questions. Notre équipe est là pour vous accompagner.';
+    // 3. Réponses génériques courantes
+    if (lowerMessage.includes('bonjour') || lowerMessage.includes('salut') || lowerMessage.includes('hello')) {
+      return 'Bonjour ! 😊 Je suis là pour répondre à vos questions sur la maternité et vous accompagner dans cette belle aventure. N\'hésitez pas à me poser vos questions !';
     }
     
-    return 'Je ne suis pas sûre de comprendre votre question. Pouvez-vous reformuler ou choisir parmi ces sujets : consultations prénatales, échographies, accouchement, post-partum, rendez-vous ? 🤔';
+    if (lowerMessage.includes('merci') || lowerMessage.includes('remercie')) {
+      return 'De rien ! 😊 C\'est un plaisir de vous accompagner. N\'hésitez pas si vous avez d\'autres questions, notre équipe est toujours là pour vous soutenir. 💕';
+    }
+
+    if (lowerMessage.includes('au revoir') || lowerMessage.includes('bye')) {
+      return 'Au revoir ! 👋 Prenez soin de vous et n\'hésitez pas à revenir si vous avez des questions. Nous vous souhaitons le meilleur pour votre parcours maternel ! 💕';
+    }
+    
+    // 4. Message de contact élégant si aucune réponse trouvée
+    return `Je vous remercie pour votre question. Afin de mieux vous accompagner et répondre de manière personnalisée à votre demande, nous vous invitons à nous contacter directement :
+
+📍 [Voir sur la carte](https://maps.app.goo.gl/en3veG11g4mxaGBWA) – Abidjan, Côte d'Ivoire
+📞 01 53 38 61 20
+✉️ oasisdelamaternite@gmail.com
+
+Notre équipe se fera un plaisir de vous répondre rapidement et vous accompagner avec toute la bienveillance que vous méritez. 💕`;
   };
 
   const handleSendMessage = async () => {
