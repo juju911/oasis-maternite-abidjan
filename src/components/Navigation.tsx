@@ -7,6 +7,13 @@ const Navigation = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "22505669977785";
+    const message = "👉 Bonjour, je viens du site internet OASIS de la Maternité...";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  };
+
   const menuItems = [
     { name: "Accueil", href: "#accueil" },
     { name: "À propos", href: "#apropos" },
@@ -50,7 +57,7 @@ const Navigation = () => {
               <Baby className="h-4 w-4 mr-2" />
               Rendez-vous
             </Button>
-            <Button variant="maternal" size="sm">
+            <Button variant="maternal" size="sm" onClick={handleWhatsAppClick}>
               WhatsApp
             </Button>
           </div>
@@ -87,7 +94,7 @@ const Navigation = () => {
                   <Baby className="h-4 w-4 mr-2" />
                   Rendez-vous
                 </Button>
-                <Button variant="maternal" size="sm">
+                <Button variant="maternal" size="sm" onClick={handleWhatsAppClick}>
                   WhatsApp
                 </Button>
               </div>
